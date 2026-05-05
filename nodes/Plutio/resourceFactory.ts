@@ -31,7 +31,7 @@ function fieldToProperty(field: PlutioField, resourceName: string, operation: st
 				operation: [operation],
 			},
 		},
-	} as INodeProperties;
+	} as unknown as INodeProperties;
 	if (field.options) {
 		(base as IDataObjectLike).options = field.options;
 	}

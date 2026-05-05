@@ -1,12 +1,7 @@
 {
   "compilerOptions": {
-    "lib": [
-      "es2017",
-      "es2019"
-    ],
-    "types": [
-      "node"
-    ],
+    "lib": ["es2017", "es2019"],
+    "types": ["node"],
     "module": "commonjs",
     "noImplicitAny": true,
     "removeComments": true,
@@ -23,8 +18,9 @@
     "skipLibCheck": true
   },
   "include": [
-    "credentials*",
-    "nodes*",
-    "nodes*.json"
-  ]
+    "credentials/**/*",
+    "nodes/**/*",
+    "nodes/**/*.json"
+  ],
+  "exclude": ["./dist/"]
 }

@@ -44,7 +44,7 @@ export interface PlutioField {
 	name: string;
 	displayName: string;
 	type: 'string' | 'number' | 'boolean' | 'dateTime' | 'options' | 'json' | 'multiOptions';
-	default?: unknown;
+	default?: any;
 	description?: string;
 	required?: boolean;
 	options?: INodePropertyOptions[];
