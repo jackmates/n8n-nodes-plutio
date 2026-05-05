@@ -1,8 +1,8 @@
 import { ICredentialType, INodeProperties } from 'n8n-workflow';
 
 export class PlutioApi implements ICredentialType {
-	name = 'plutioApi';
-	displayName = 'Plutio API';
+	name = 'plutioMatesApi';
+	displayName = 'Plutio (MATES) API';
 	documentationUrl = 'https://docs.plutio.com';
 	properties: INodeProperties[] = [
 		{

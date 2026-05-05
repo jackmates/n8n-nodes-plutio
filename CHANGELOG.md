@@ -2,6 +2,32 @@
 
 All notable changes to `n8n-nodes-plutio-mates`.
 
+## 0.3.0 — 2026-05-05
+
+Renamed for side-by-side install with the original `n8n-nodes-plutio`.
+
+### Breaking
+
+- **Node internal name:** `plutio` → `plutioMates`
+- **Node display name:** `Plutio` → `Plutio (MATES)`
+- **Credential internal name:** `plutioApi` → `plutioMatesApi`
+- **Credential display name:** `Plutio API` → `Plutio (MATES) API`
+
+### Why
+
+The original Chykalophia `n8n-nodes-plutio` and this fork both registered a node identifier of `plutio` and credential of `plutioApi`. Installing both side-by-side caused n8n to refuse the second install with "There is already an entry with this name". Renaming this fork lets the two coexist so existing workflows that reference the original keep working untouched, and new workflows can use the expanded coverage here.
+
+### Migration
+
+If you already had `@matesincorporated/n8n-nodes-plutio` or `n8n-nodes-plutio-mates@0.2.0` installed:
+
+1. Uninstall it (Settings → Community Nodes → uninstall)
+2. Install `n8n-nodes-plutio-mates@0.3.0`
+3. Recreate the credential as **Plutio (MATES) API** (same fields: Business, Client ID, Client Secret)
+4. Update any existing workflows: open each Plutio (MATES) node and re-pick the renamed credential
+
+The original `n8n-nodes-plutio` and any workflows depending on it are unaffected.
+
 ## 0.2.0 — 2026-05-05
 
 Hard fork from `n8n-nodes-plutio@0.1.1` by Chykalophia. Major restructure to support full Plutio v1.11 API surface.

@@ -3,6 +3,8 @@
 [![npm version](https://img.shields.io/npm/v/n8n-nodes-plutio-mates.svg)](https://www.npmjs.com/package/n8n-nodes-plutio-mates)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
 
+> **0.3.0+ note:** This fork's node is now called **Plutio (MATES)** with credential **Plutio (MATES) API** (was `Plutio` / `Plutio API` in 0.2.0). The rename allows side-by-side install with the original `n8n-nodes-plutio`. See CHANGELOG.md for migration.
+
 An n8n community node for [Plutio](https://plutio.com) — full coverage of the Plutio public API v1.11.
 
 This is a hard fork of [Chykalophia/n8n-nodes-plutio](https://git.cklph.dev/Chykalophia/n8n-nodes-plutio), extended by [MATES Incorporated](https://matesincorporated.com) to cover every documented Plutio v1.11 resource. The original repo covered Tasks, Projects, Comments, Invoices, Companies and People; this fork brings it up to ~40 resources.

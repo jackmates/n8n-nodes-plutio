@@ -30,7 +30,7 @@ function cacheKey(business: string, clientId: string): string {
 async function fetchAccessToken(
 	this: IExecuteFunctions | ILoadOptionsFunctions | IHookFunctions,
 ): Promise<string> {
-	const credentials = await this.getCredentials('plutioApi');
+	const credentials = await this.getCredentials('plutioMatesApi');
 	const business = `${credentials.business}`;
 	const clientId = `${credentials.clientId}`;
 	const clientSecret = `${credentials.clientSecret}`;
@@ -104,7 +104,7 @@ export async function plutioApiRequest(
 	uri?: string,
 	option: IDataObject = {},
 ): Promise<IDataObject | IDataObject[]> {
-	const credentials = await this.getCredentials('plutioApi');
+	const credentials = await this.getCredentials('plutioMatesApi');
 	const business = `${credentials.business}`;
 	const accessToken = await fetchAccessToken.call(this);
 

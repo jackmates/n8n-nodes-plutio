@@ -16,18 +16,18 @@ import { executeOperation } from './executeOperation';
 
 export class Plutio implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Plutio',
-		name: 'plutio',
+		displayName: 'Plutio (MATES)',
+		name: 'plutioMates',
 		icon: 'file:plutio.png',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 		description: 'Read and write data in your Plutio workspace via the v1.11 API.',
-		defaults: { name: 'Plutio' },
+		defaults: { name: 'Plutio (MATES)' },
 		inputs: ['main'],
 		outputs: ['main'],
 		credentials: [
-			{ name: 'plutioApi', required: true },
+			{ name: 'plutioMatesApi', required: true },
 		],
 		properties: [
 			buildResourceProperty(),
