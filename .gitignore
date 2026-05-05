@@ -1,0 +1,13 @@
+node_modules
+.DS_Store
+.tmp
+tmp
+dist
+npm-debug.log*
+yarn.lock
+.vscode/launch.json
+
+# added by MATES fork
+dist/
+node_modules/
+.env
