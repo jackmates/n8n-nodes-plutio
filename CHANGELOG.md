@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `@matesincorporated/n8n-nodes-plutio`.
+All notable changes to `n8n-nodes-plutio-mates`.
 
 ## 0.2.0 — 2026-05-05
 
@@ -32,7 +32,7 @@ Hard fork from `n8n-nodes-plutio@0.1.1` by Chykalophia. Major restructure to sup
 If you used `n8n-nodes-plutio@0.1.x`, update your existing nodes:
 
 1. Uninstall: `npm uninstall n8n-nodes-plutio`
-2. Install: `npm install @matesincorporated/n8n-nodes-plutio`
+2. Install: `npm install n8n-nodes-plutio-mates`
 3. Existing workflow nodes will need the credential reconnected (same fields, new credential type name = `plutioApi` — should auto-match by name).
 4. The Resource dropdown's option labels are unchanged for the 6 original resources, but new options are now available.
 

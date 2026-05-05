@@ -1,6 +1,6 @@
-# @matesincorporated/n8n-nodes-plutio
+# n8n-nodes-plutio-mates
 
-[![npm version](https://img.shields.io/npm/v/@matesincorporated/n8n-nodes-plutio.svg)](https://www.npmjs.com/package/@matesincorporated/n8n-nodes-plutio)
+[![npm version](https://img.shields.io/npm/v/n8n-nodes-plutio-mates.svg)](https://www.npmjs.com/package/n8n-nodes-plutio-mates)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
 
 An n8n community node for [Plutio](https://plutio.com) — full coverage of the Plutio public API v1.11.
@@ -47,7 +47,7 @@ Plus an "Additional Fields (JSON)" escape hatch on Create/Update so you can send
 Settings → Community Nodes → Install → enter:
 
 ```
-@matesincorporated/n8n-nodes-plutio
+n8n-nodes-plutio-mates
 ```
 
 ### Self-hosted (Docker)
@@ -55,17 +55,17 @@ Settings → Community Nodes → Install → enter:
 ```dockerfile
 FROM n8nio/n8n
 USER root
-RUN npm install -g @matesincorporated/n8n-nodes-plutio
+RUN npm install -g n8n-nodes-plutio-mates
 USER node
 ```
 
-Or set `N8N_NODES_INCLUDE` to `["@matesincorporated/n8n-nodes-plutio"]`.
+Or set `N8N_NODES_INCLUDE` to `["n8n-nodes-plutio-mates"]`.
 
 ### Self-hosted (npm)
 
 ```bash
 cd ~/.n8n
-npm install @matesincorporated/n8n-nodes-plutio
+npm install n8n-nodes-plutio-mates
 ```
 
 Then restart n8n.
@@ -150,7 +150,7 @@ npm run build
 npm link
 
 # In your n8n install (e.g. ~/.n8n)
-npm link @matesincorporated/n8n-nodes-plutio
+npm link n8n-nodes-plutio-mates
 ```
 
 Then restart n8n. The Plutio node will appear in the node palette.
