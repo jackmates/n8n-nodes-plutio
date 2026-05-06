@@ -2,6 +2,22 @@
 
 All notable changes to `n8n-nodes-plutio-mates`.
 
+## 0.4.0 — 2026-05-06
+
+Mark the node as `usableAsTool: true` so n8n AI Agents can call it directly without needing the `N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE=true` environment variable.
+
+### Added
+
+- `usableAsTool: true` on the Plutio (MATES) node description. With this flag, an n8n AI Agent can wire the node as an `ai_tool` subnode and call any Plutio operation (search People, create Contracts, list Tasks, etc.) using the agent's `$fromAI()` parameter mechanism — no extra env config required on the host.
+
+### Why
+
+n8n's AI Agent + Tool pattern only allows community nodes to be used as tools when either (a) the host has set `N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE=true`, or (b) the node opts in via `usableAsTool: true` in its description. Adding the flag makes the node "AI-ready" out of the box, removing a sharp edge for self-hosted users.
+
+### Usage
+
+In an n8n workflow with an AI Agent, drag in the **Plutio (MATES)** node and connect it to the agent's `Tool` slot. Configure the resource + operation as normal. Use `$fromAI('paramName', 'description', 'string')` in any field where the agent should fill in a value at runtime — for example, a regex search query on the `q` field, or an `_id` to update a specific record.
+
 ## 0.3.0 — 2026-05-05
 
 Renamed for side-by-side install with the original `n8n-nodes-plutio`.

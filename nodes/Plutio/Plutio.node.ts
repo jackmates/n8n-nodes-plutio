@@ -24,6 +24,8 @@ export class Plutio implements INodeType {
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 		description: 'Read and write data in your Plutio workspace via the v1.11 API.',
 		defaults: { name: 'Plutio (MATES)' },
+		// @ts-expect-error usableAsTool was added in newer n8n-workflow types; older pinned version lacks it but n8n runtime supports it.
+		usableAsTool: true,
 		inputs: ['main'],
 		outputs: ['main'],
 		credentials: [

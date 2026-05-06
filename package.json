@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-plutio-mates",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "n8n community node for Plutio \u2014 full coverage of the v1.11 API.",
   "keywords": [
     "n8n-community-node-package",
